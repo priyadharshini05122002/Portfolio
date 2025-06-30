@@ -1,0 +1,474 @@
+body {
+    font-family: 'Roboto', 'Segoe UI', Arial, sans-serif;
+    background: transparent;
+    color: #23213a;
+    letter-spacing: 0.02em;
+}
+header {
+    background: rgba(20, 20, 20, 0.85);
+    color: #fff;
+    padding: 40px 20px 20px 20px;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.25);
+    border-bottom: 2px solid #05bcf9;
+    border-radius: 0 0 24px 24px;
+    margin-bottom: 24px;
+}
+h1 {
+    font-size: 2.8rem;
+    margin-bottom: 0.2em;
+    color: #aeea00;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 8px #222, 0 0 12px #05bcf9;
+    text-align: center;
+}
+header p {
+    color: #ffe0b2;
+    font-size: 1.2rem;
+    margin-top: 0.5em;
+    text-shadow: 1px 1px 6px #222;
+}
+.container {
+    background: rgba(74,78,105,0.93);
+    border-radius: 22px;
+    box-shadow: 0 8px 32px rgba(154,140,152,0.18);
+    padding: 32px 18px 18px 18px;
+    margin: 32px auto 24px auto;
+    max-width: 980px;
+    backdrop-filter: blur(2px);
+}
+.section {
+    margin-bottom: 38px;
+    padding: 18px 0 0 0;
+    border-bottom: 1.5px solid #9a8c98;
+    border-radius: 0 0 12px 12px;
+    background: linear-gradient(90deg, #9a8c98 0%, #4a4e69 100%);
+    box-shadow: 0 2px 8px rgba(154,140,152,0.10);
+}
+.section:last-child {
+    border-bottom: none;
+}
+img.profile {
+    max-width: 180px;
+    border-radius: 50%;
+    border: 4px solid #05bcf9;
+    margin-bottom: 18px;
+    box-shadow: 0 2px 12px rgba(2,80,46,0.15);
+    background: #fff;
+}
+.projects img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    margin: 12px 0 18px 0;
+    box-shadow: 0 2px 8px rgba(2,80,46,0.10);
+    border: 2px solid #aeea00;
+}
+h2 {
+    color: #f2e9e4;
+    font-size: 2rem;
+    margin-bottom: 12px;
+    letter-spacing: 1px;
+    text-shadow: 0 2px 8px #23213a;
+    text-align: center;
+}
+h3 {
+    color: #aeea00;
+    text-shadow: 1px 1px 6px #222;
+    text-align: center;
+}
+ul {
+    text-align: left;
+    display: inline-block;
+    margin: 0 auto 1em auto;
+    padding-left: 1.2em;
+    background: rgba(0,0,0,0.15);
+    border-radius: 8px;
+}
+li {
+    margin-bottom: 0.5em;
+    font-size: 1.08rem;
+}
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 10px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.skill-badge {
+    background: linear-gradient(90deg, #4a4e69 0%, #9a8c98 100%);
+    color: #f2e9e4;
+    font-weight: 600;
+    border-radius: 8px;
+    padding: 6px 18px;
+    font-size: 1rem;
+    box-shadow: 0 1px 4px #23213a;
+    border: 1.2px solid #9a8c98;
+    transition: background 0.2s, color 0.2s, transform 0.2s;
+}
+.skill-badge:hover {
+    background: #c9ada7;
+    color: #23213a;
+    transform: scale(1.08) rotate(-2deg);
+}
+.certificates-list {
+    list-style: none;
+    padding-left: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+    justify-content: flex-start;
+    background: linear-gradient(90deg, #00bfae 0%, #3a1c71 100%);
+    border-radius: 14px;
+    box-shadow: 0 4px 32px #00bfae, 0 1.5px 0 #ff5e62 inset;
+    border: 2.5px solid #ffb86b;
+    padding: 18px 18px 10px 18px;
+    margin-top: 10px;
+    position: relative;
+    z-index: 1;
+    filter: drop-shadow(0 0 12px #ff5e62);
+}
+.certificates-list::before {
+    content: '';
+    position: absolute;
+    top: -4px; left: -4px; right: -4px; bottom: -4px;
+    z-index: -1;
+    border-radius: 18px;
+    background: linear-gradient(270deg, #00bfae, #ff5e62, #3a1c71, #ffb86b, #00bfae);
+    background-size: 800% 800%;
+    animation: borderGradientMove 8s ease-in-out infinite;
+}
+@keyframes borderGradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+.certificates-list li a {
+    color: #ff5e62;
+    font-weight: 700;
+    background: #fffbe7;
+    border-radius: 8px;
+    padding: 8px 18px;
+    text-decoration: none;
+    box-shadow: 0 2px 12px #ffb86b, 0 1.5px 0 #00bfae inset;
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    letter-spacing: 0.5px;
+    font-size: 1.08rem;
+    text-shadow: 0 2px 8px #3a1c71, 0 0 6px #fffbe7;
+}
+.certificates-list li a::after {
+    content: '';
+    position: absolute;
+    left: 0; bottom: 0;
+    width: 100%; height: 3px;
+    background: linear-gradient(90deg, #ff5e62, #00bfae, #ffb86b);
+    border-radius: 2px;
+    transform: scaleX(0);
+    transition: transform 0.3s cubic-bezier(.4,2,.6,1);
+}
+.certificates-list li a:hover::after, .certificates-list li a:focus::after {
+    transform: scaleX(1);
+}
+.contact-info p, .contact-info a {
+    font-size: 1.1rem;
+    color: #05bcf9;
+    text-shadow: 1px 1px 4px #222;
+}
+.contact-info a {
+    text-decoration: underline;
+}
+footer {
+    background: rgba(74,78,105,0.93);
+    border-radius: 0 0 18px 18px;
+    box-shadow: 0 -2px 12px #9a8c98;
+    padding: 18px 0 8px 0;
+    margin-top: 18px;
+    text-align: center;
+    font-size: 1.08rem;
+    color: #f2e9e4;
+}
+a {
+    color: #05bcf9;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+a:hover {
+    color: #aeea00;
+    text-shadow: 0 0 8px #05bcf9;
+}
+#bg-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100vw;
+    min-height: 100vh;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    object-fit: cover;
+    opacity: 0.9;
+    filter: blur(0px) brightness(1.08) contrast(1.08);
+    background: #02502e;
+    pointer-events: none;
+    display: block;
+    transition: opacity 0.8s cubic-bezier(0.4,0,0.2,1), filter 0.8s cubic-bezier(0.4,0,0.2,1), transform 1.2s cubic-bezier(0.4,0,0.2,1);
+}
+#bg-video:hover {
+    opacity: 1;
+    filter: blur(2px) brightness(1.1);
+    transform: scale(1.03) rotate(-1deg);
+}
+.navbar {
+    width: 100%;
+    background: rgba(20, 20, 20, 0.95);
+    border-radius: 18px 18px 0 0;
+    margin-bottom: 18px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.18);
+    padding: 0.5em 0;
+    box-shadow: 0 4px 32px #00bfae, 0 1.5px 0 #ff5e62 inset;
+    border: 2px solid #ffb86b;
+    background: linear-gradient(90deg, rgba(0,191,174,0.95) 0%, rgba(58,28,113,0.95) 100%);
+    overflow: hidden;
+}
+.navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0 8px;
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+.navbar li {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+.navbar a {
+    display: flex;
+    align-items: center;
+    height: 44px;
+    padding: 0 18px;
+    border-radius: 20px;
+    box-sizing: border-box;
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #fffbe7;
+    background: none;
+    border: none;
+    transition: color 0.2s, background 0.2s, box-shadow 0.2s;
+}
+.navbar a.active, .navbar a:hover, .navbar a:focus {
+    background: #ff5e62;
+    color: #fffbe7;
+    box-shadow: 0 2px 12px #ff5e62;
+    border-radius: 20px;
+}
+.contact-form {
+    background: #23213a;
+    border-radius: 14px;
+    box-shadow: 0 2px 8px #9a8c98;
+    padding: 18px 22px 14px 22px;
+    max-width: 420px;
+    margin: 0 auto;
+}
+.form-group {
+    margin-bottom: 16px;
+}
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form input[type="tel"] {
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: 7px;
+    border: 1.2px solid #9a8c98;
+    font-size: 1rem;
+    background: #f2e9e4;
+    color: #23213a;
+    transition: border 0.2s, box-shadow 0.2s;
+    box-shadow: 0 1px 4px #23213a;
+}
+.contact-form input:focus {
+    border: 1.5px solid #c9ada7;
+    outline: none;
+    box-shadow: 0 2px 8px #c9ada7;
+}
+.contact-form button[type="submit"] {
+    background: linear-gradient(90deg, #23213a 0%, #9a8c98 100%);
+    color: #fff;
+    font-weight: 700;
+    border: none;
+    border-radius: 7px;
+    padding: 10px 28px;
+    font-size: 1.08rem;
+    cursor: pointer;
+    box-shadow: 0 2px 8px #9a8c98;
+    transition: background 0.2s, box-shadow 0.2s, transform 0.2s;
+}
+.contact-form button[type="submit"]:hover {
+    background: linear-gradient(90deg, #9a8c98 0%, #23213a 100%);
+    box-shadow: 0 4px 16px #9a8c98;
+    transform: scale(1.04);
+}
+.project-card {
+    background: linear-gradient(135deg, #00bfae 0%, #3a1c71 100%); /* Teal to indigo */
+    color: #fffbe7;
+    border: 2.5px solid #5eead4;
+    border-radius: 22px;
+    box-shadow: 0 8px 40px 0 #3a1c71, 0 1.5px 0 #00bfae inset;
+    margin-bottom: 38px;
+    padding: 28px 24px 18px 24px;
+    position: relative;
+    transition: transform 0.3s cubic-bezier(.4,2,.6,1), box-shadow 0.3s, background 0.3s;
+    will-change: transform, box-shadow, background;
+    overflow: hidden;
+}
+.project-card.featured {
+    border-color: #5eead4;
+    box-shadow: 0 12px 48px 0 #00bfae, 0 2px 0 #3a1c71 inset;
+}
+.project-card:hover {
+    transform: scale(1.055) rotate(-1deg);
+    box-shadow: 0 16px 48px 0 #00bfae, 0 2px 0 #3a1c71 inset;
+    background: linear-gradient(135deg, #3a1c71 0%, #00bfae 100%);
+}
+.project-badge {
+    background: linear-gradient(90deg, #5eead4 0%, #3a1c71 100%);
+    color: #23213a;
+    border: 2px solid #00bfae;
+}
+.project-features {
+    background: rgba(0,191,174,0.10);
+    color: #fffbe7;
+    box-shadow: 0 1px 6px #00bfae;
+    border-left: 4px solid #3a1c71;
+}
+.feature-highlight {
+    color: #3a1c71;
+    background: #5eead4;
+}
+.feature-highlight-alt {
+    color: #fff;
+    background: none;
+}
+.github-btn {
+    background: linear-gradient(90deg, #00bfae 0%, #3a1c71 100%);
+    color: #fffbe7;
+}
+.github-btn-dark {
+    background: linear-gradient(90deg, #3a1c71 0%, #5eead4 100%);
+    color: #fffbe7;
+}
+.github-btn-light {
+    background: linear-gradient(90deg, #00bfae 0%, #5eead4 100%);
+    color: #3a1c71;
+}
+.github-btn:hover, .github-btn:focus {
+    background: linear-gradient(90deg, #5eead4 0%, #00bfae 100%);
+    color: #23213a;
+    box-shadow: 0 6px 24px #5eead4;
+    transform: scale(1.06) rotate(-2deg);
+}
+.project-card .github-btn,
+.project-card .github-btn-dark {
+    display: block;
+    margin: 18px auto 0 auto;
+    width: fit-content;
+    text-align: center;
+}
+.section#resume {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.resume-link {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 12px 28px;
+    background: linear-gradient(90deg, #05bcf9 0%, #3a1c71 100%);
+    color: #fffbe7;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    box-shadow: 0 2px 12px #05bcf9, 0 1.5px 0 #3a1c71 inset;
+    text-decoration: none;
+    letter-spacing: 0.5px;
+    transition: background 0.3s, color 0.3s, box-shadow 0.3s, transform 0.2s;
+}
+.resume-link:hover, .resume-link:focus {
+    background: linear-gradient(90deg, #3a1c71 0%, #05bcf9 100%);
+    color: #aeea00;
+    box-shadow: 0 4px 24px #3a1c71;
+    transform: scale(1.06) rotate(-2deg);
+    text-decoration: underline;
+}
+h1,
+h2,
+h3 {
+    text-align: center;
+}
+.subtitle {
+    display: block;
+    text-align: center;
+    margin: 0 auto 0.5em auto;
+    font-size: 1.2rem;
+    color: #ffe0b2;
+    text-shadow: 1px 1px 6px #222;
+    max-width: 100%;
+}
+/* --- About Me Section --- */
+.about-flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    text-align: center;
+}
+.about-flex .profile {
+    margin-bottom: 0;
+}
+.about-text {
+    max-width: 540px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* --- Technical Skills Centered --- */
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 10px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* --- Personal Portfolio Project Card: GitHub Button on New Line --- */
+.project-card .portfolio-img {
+    display: block;
+    margin: 0 auto 18px auto;
+}
+.project-card h3 {
+    margin-bottom: 10px;
+}
+.project-card .github-btn-light {
+    display: block;
+    margin: 18px auto 0 auto;
+    width: fit-content;
+}
+
+/* --- Background Video More Visible --- */
+#bg-video {
+    opacity: 0.9;
+    filter: blur(0px) brightness(1.08) contrast(1.08);
+}
